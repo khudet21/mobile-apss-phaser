@@ -1,7 +1,6 @@
 <script lang="ts">
-import Phaser from 'phaser';
-import { defineComponent, onMounted } from 'vue';
-
+import Phaser from 'phaser'
+import { defineComponent, onMounted } from 'vue'
 
 export default defineComponent({
   name: 'PhaserGame',
@@ -17,36 +16,32 @@ export default defineComponent({
         },
         scene: {
           preload,
-          create,        
+          create,
         },
-      };
-      
-      const game = new Phaser.Game(config);
-      
-      let myScene: Phaser.Scene;
-      
-      function preload() {
-        this.load.image('sprite', 'images/BGStage1.png'); // Pastikan jalur benar
       }
-      
-      function create() {       
-        this.bg = this.add.image(this.scale.width / 2, this.scale.height / 2, 'sprite'); // Tambahkan gambar
-      
+
+      const game = new Phaser.Game(config)
+
+      function preload() {
+        this.load.image('sprite', 'images/BGStage1.png') // Pastikan jalur benar
+      }
+
+      function create() {
+        this.bg = this.add.image(this.scale.width / 2, this.scale.height / 2, 'sprite') // Tambahkan gambar
+
         if (this.bg) {
-          this.bg.setDisplaySize(this.scale.width, this.scale.height); // Sesuaikan gambar dengan canvas
-        }        
+          this.bg.setDisplaySize(this.scale.width, this.scale.height) // Sesuaikan gambar dengan canvas
+        }
       }
 
       // Responsif saat browser di-resize
       window.addEventListener('resize', () => {
-        game.scale.resize(window.innerWidth, window.innerHeight); // Perbarui ukuran canvas
+        game.scale.resize(window.innerWidth, window.innerHeight) // Perbarui ukuran canvas
         // game.scene.getScene('default').resize(); // Perbarui ukuran gambar
-      });
-    });
+      })
+    })
   },
-});
-
-
+})
 </script>
 
 <style scoped>
