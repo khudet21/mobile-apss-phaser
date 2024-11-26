@@ -1,0 +1,12 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw; /* Lebar penuh viewport */
+    height: 100vh; /* Tinggi penuh viewport */
+    overflow: hidden; /* Hilangkan scroll */
+  }
+  
+  canvas {
+    display: block; /* Hilangkan margin canvas bawaan */
+  }
+  
