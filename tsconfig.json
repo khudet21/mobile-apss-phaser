@@ -3,8 +3,10 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
-    "jsx": "preserve",
+    "lib": ["DOM", "ESNext"],
+    "types": ["vite/client"], // Penting untuk mengenali import.meta.env
     "strict": true,
+    "jsx": "preserve",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
