@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "phaser": "^3.87.0",
+    "phaser3-rex-plugins": "^1.80.11",
     "pinia": "^2.2.6",
     "rimraf": "^6.0.1",
     "uuid": "^11.0.3",
